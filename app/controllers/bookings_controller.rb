@@ -13,7 +13,6 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.user = current_user
     @booking.car = @car
-
     if @booking.save
       redirect_to root_path, notice: "Booking done successfully."
     else
