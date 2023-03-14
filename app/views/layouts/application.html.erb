@@ -3,6 +3,7 @@
   <head>
     <title>Vroomie</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,6 +12,19 @@
   </head>
 
   <body>
+   <div class="topnav">
+   <a class="active" href="#home">Home</a>
+   <a href="#about">rent a car</a>
+   <a href="#contact">bookings</a>
+   <div class="login-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Username" name="username">
+      <input type="text" placeholder="Password" name="psw">
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</div>
+
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
