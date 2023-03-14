@@ -2,7 +2,11 @@
   <h1><%= @car.brand %></h1>
 </div>
 
-<div class= "container" >
+
+<div class= "card-car" >
+  <div class="car-img">
+    <%= cl_image_tag @car.photo.key, height: 300, crop: :fill %>
+  </div>
   <h2> Description:<h2>
   <h5><%= @car.description %></h5>
   <h2> Key Details:</h2>
