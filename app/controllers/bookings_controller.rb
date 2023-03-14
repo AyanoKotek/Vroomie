@@ -27,7 +27,6 @@ class BookingsController < ApplicationController
 
     redirect_to root_path, status: :see_other, notice: "Booking was successfully deleted."
   end
-end
 
   private
 
@@ -38,3 +37,4 @@ end
   def booking_params
     params.require(:booking).permit(:date)
   end
+end
