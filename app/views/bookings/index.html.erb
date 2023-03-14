@@ -15,8 +15,7 @@
     <% @bookings.each do |booking| %>
       <tr>
         <td><%= booking.id %></td>
-        <td><%= booking.user.name %></td>
-        <td><%= booking.car.make %></td>
+        <td><%= booking.user.email %></td>
         <td><%= booking.date %></td>
         <td>
           <%= link_to "Delete", booking_path(booking), method: :delete, data: { confirm: "Are you sure you want to delete this booking?" } %>
