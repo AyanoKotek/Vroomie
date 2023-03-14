@@ -10,8 +10,8 @@ User.destroy_all
 Car.destroy_all
 
 puts "Creating User data..."
-ayano = User.create!(first_name: "Ayano", last_name: "Umemoto", email: "asdfg@gmail.com", password: 123455)
-hakim = User.create!(first_name: "Hakim", last_name: "Benkacem", email: "qwert@gmail.com", password: 678989)
+ayano = User.create!(first_name: "Ayano", last_name: "Umemoto", email: "ayano@gmail.com", password: 123456)
+hakim = User.create!(first_name: "Hakim", last_name: "Benkacem", email: "hakim@gmail.com", password: 678910)
 
 puts "Creating Car data..."
 
