@@ -7,10 +7,21 @@
 #   Character.create(name: "Luke", movie: movies.first)
 puts "cleaning the databese..."
 User.destroy_all
+Car.destroy_all
 
-puts "Creating new data"
-User.create!(first_name: "Ayano", last_name: "Umemoto", email: "asdfg@gmail.com", password: 123455)
+puts "Creating User data..."
+ayano = User.create!(first_name: "Ayano", last_name: "Umemoto", email: "asdfg@gmail.com", password: 123455)
+hakim = User.create!(first_name: "Hakim", last_name: "Benkacem", email: "qwert@gmail.com", password: 678989)
 
-User.create!(first_name: "Hakim", last_name: "Benkacem", email: "qwert@gmail.com", password: 678989)
+puts "Creating Car data..."
+
+car1 = Car.new(brand: "bmw", description: "It's a nice car", price: 200, year: 2020)
+car1.user = ayano
+car1.save!
+
+car2 = Car.new(brand: "Mercedes", description: "Very beautiful car", price: 300, year: 2021)
+car2.user = hakim
+car2.save!
+
 
 puts "Finished..."
