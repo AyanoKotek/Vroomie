@@ -1,0 +1,8 @@
+<div>
+  <h1>Welcome to Vroomie</h1>
+</div>
+<div class= "container">
+  <% @cars.each do |c| %>
+  <%= link_to c.brand, car_path(c), class: 'btn btn-primary' %>
+  <% end %>
+</div>
