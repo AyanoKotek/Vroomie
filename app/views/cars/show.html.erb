@@ -1,1 +1,14 @@
-<h1>Show page of specific car</h1>
+<div class="container">
+  <h1><%= @car.brand %></h1>
+</div>
+
+<div class= "container" >
+  <h2> Description:<h2>
+  <h5><%= @car.description %></h5>
+  <h2> Key Details:</h2>
+  <ul>
+    <li> Year: <%= @car.year %></li>
+    <li> Price: £<%= @car.price %></li>
+  </ul>
+  <%= link_to "Make a booking", new_car_booking_path(@car), class: 'btn btn-success' %>
+</div>
