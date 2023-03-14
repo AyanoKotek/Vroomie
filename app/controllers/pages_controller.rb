@@ -5,5 +5,4 @@ class PagesController < ApplicationController
   def show
     @car = Car.fid(params[:id])
   end
-
 end
