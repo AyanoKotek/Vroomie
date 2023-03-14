@@ -2,6 +2,8 @@
   <h1><%= @car.brand %></h1>
 </div>
 
+<%= link_to "Return home", root_path(@list), class: 'btn btn-primary' %>
+
 <div>
   <h2> Description:<h2>
   <p><%= @car.description %></p>
@@ -10,7 +12,7 @@
 <div>
   <h2> Key Details:</h2>
   <ul>
-    <li> <%= @car.year %></li>
-    <li> <%= @car.price %></li>
+    <li> Year: <%= @car.year %></li>
+    <li> Price: £<%= @car.price %></li>
   </ul>
 </div>
