@@ -1,1 +1,16 @@
-<h1>Show page of specific car</h1>
+<div>
+  <h1><%= @car.brand %></h1>
+</div>
+
+<div>
+  <h2> Description:<h2>
+  <p><%= @car.description %></p>
+</div>
+
+<div>
+  <h2> Key Details:</h2>
+  <ul>
+    <li> <%= @car.year %></li>
+    <li> <%= @car.price %></li>
+  </ul>
+</div>
