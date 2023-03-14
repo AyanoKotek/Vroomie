@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :set_car, only: [:new, :create, :show, :destroy]
+  before_action :set_car, only: [:new, :create, :show]
 
   def index
     @bookings = Booking.all
@@ -24,7 +24,6 @@ class BookingsController < ApplicationController
   def destroy
     @booking = Booking.find(params[:id])
     @booking.destroy
-
     redirect_to root_path, status: :see_other, notice: "Booking was successfully deleted."
   end
 
