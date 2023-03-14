@@ -1,9 +1,12 @@
 class BookingsController < ApplicationController
   before_action :set_car, only: [:new, :create]
 
+  def index
+    @bookings = Booking.all
+  end
+
   def new
     @booking = Booking.new
-
   end
 
   def create
@@ -18,6 +21,13 @@ class BookingsController < ApplicationController
     end
   end
 
+  def destroy
+    @booking = Booking.find(params[:id])
+    @booking.destroy
+    redirect_to bookings_path, notice: "Booking was successfully deleted."
+  end
+end
+
   private
 
   def set_car
@@ -27,4 +37,3 @@ class BookingsController < ApplicationController
   def booking_params
     params.require(:booking).permit(:date)
   end
-end
