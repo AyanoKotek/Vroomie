@@ -26,7 +26,6 @@ class BookingsController < ApplicationController
     @booking.destroy
     redirect_to bookings_path, notice: "Booking was successfully deleted."
   end
-end
 
   private
 
@@ -37,3 +36,4 @@ end
   def booking_params
     params.require(:booking).permit(:date)
   end
+end
