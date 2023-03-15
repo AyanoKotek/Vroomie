@@ -5,13 +5,13 @@
 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="<%= cl_image_path @car.photo.key%>" class="d-block w-100" alt="First image of car">
+      <img src="<%= cl_image_path @car.photos.first.key%>" class="d-block w-100" alt="First image of car">
     </div>
     <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="Second image of car">
+      <img src="<%= cl_image_path @car.photos.second.key%>" class="d-block w-100" alt="Second image of car">
     </div>
     <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="Third image of car">
+      <img src="<%= cl_image_path @car.photos.third.key%>" class="d-block w-100" alt="Third image of car">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -39,8 +39,5 @@
 </div>
 <div class="col text-center">
   <%= link_to "Make a booking", new_car_booking_path(@car), class: 'btn btn-success btn-lg' %>
-    <li> Price: £<%= @car.price %></li>
-  </ul>
-  <%= link_to "Make a booking", new_car_booking_path(@car), class: 'btn btn-success' %>
-  <%= link_to "Delete this car", car_path(@car), data: { turbo_method: :delete }, class: 'btn btn-warning' %>
+  <%= link_to "Delete this car", car_path(@car), data: { turbo_method: :delete }, class: 'btn btn-warning btn-lg' %>
 </div>
