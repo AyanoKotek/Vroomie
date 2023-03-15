@@ -14,7 +14,7 @@ class CarsController < ApplicationController
     if @car.save
      flash[:notice] = "Added successfully"
      redirect_to root_path
-    else
+     else
       render :new, status: :unprocessable_entity
     end
   end
