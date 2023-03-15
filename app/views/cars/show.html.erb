@@ -15,4 +15,5 @@
     <li> Price: £<%= @car.price %></li>
   </ul>
   <%= link_to "Make a booking", new_car_booking_path(@car), class: 'btn btn-success' %>
+  <%= link_to "Delete this car", car_path(@car), data: { turbo_method: :delete }, class: 'btn btn-warning' %>
 </div>
