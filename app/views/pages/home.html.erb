@@ -5,9 +5,15 @@
 <div class="banner" style="background-image:url(https://static.vecteezy.com/ti/gratis-vektor/p3/15393176-uppkopplad-bil-hyra-manniskor-anvander-sig-av-mobil-ansokan-for-bestallning-taxi-cab-eller-bil-delning-kvinna-nara-smartphone-skarm-med-rutt-och-plats-mark-pa-en-stad-karta-vector.jpg);">
 </div>
 
-
-<div class= "container">
+<div class="cars-container">
   <% @cars.each do |c| %>
-  <%= link_to c.brand, car_path(c), class: 'btn btn-primary' %>
+    <div class="card-product">
+      <img src="<%= cl_image_path c.photos.first.key %>"/>
+      <div class="card-product-infos">
+        <h2><%= c.brand %></h2>
+        <p>€<%= c.price %></p>
+        <%= link_to "Details", car_path(c), class: 'btn btn-primary' %>
+      </div>
+    </div>
   <% end %>
 </div>
