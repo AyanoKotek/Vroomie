@@ -1,18 +1,41 @@
-<div class="container">
-  <h1><%= @car.brand %></h1>
+<div class="container col text-center">
+  <h1><strong><%= @car.brand %></strong></h1>
 </div>
 
-
-<div class= "card-car" >
-  <div class="car-img">
-    <%= cl_image_tag @car.photo.key, height: 300, crop: :fill %>
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="<%= cl_image_path @car.photo.key%>" class="d-block w-100" alt="First image of car">
+    </div>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="Second image of car">
+    </div>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="Third image of car">
+    </div>
   </div>
-  <h2> Description:<h2>
-  <h5><%= @car.description %></h5>
-  <h2> Key Details:</h2>
-  <ul>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<div class="card mb-3">
+  <div class="card-body">
+    <h2 class="card-title">Description:</h2>
+    <h5 class="card-text"><%= @car.description %></h5>
+    <h2 class="card-title">Key Details:</h2>
+    <h5 class="card-text"><ul>
     <li> Year: <%= @car.year %></li>
-    <li> Price: £<%= @car.price %></li>
-  </ul>
-  <%= link_to "Make a booking", new_car_booking_path(@car), class: 'btn btn-success' %>
+    <li> Price: £<%= @car.price %>.00</li>
+  </ul></h5>
+    <p class="card-text"><small class="text-muted">203 views</small></p>
+  </div>
+</div>
+<div class="col text-center">
+  <%= link_to "Make a booking", new_car_booking_path(@car), class: 'btn btn-success btn-lg' %>
 </div>
