@@ -14,9 +14,15 @@ class CarsController < ApplicationController
     if @car.save
      flash[:notice] = "Added successfully"
      redirect_to root_path
-     else
+    else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def destroy
+    @car = Car.find(params[:id])
+    @car.destroy
+    redirect_to root_path, status: :see_other, notice: "Car was successfully deleted."
   end
 
   private
