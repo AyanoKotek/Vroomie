@@ -12,8 +12,9 @@ class CarsController < ApplicationController
     @car = Car.new(car_params)
     @car.user = current_user
     if @car.save
-      redirect_to cars_path(@car)
-    else
+     flash[:notice] = "Added successfully"
+     redirect_to root_path
+     else
       render :new, status: :unprocessable_entity
     end
   end
