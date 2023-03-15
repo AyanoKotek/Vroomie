@@ -1,26 +1,29 @@
-<h1>My Bookings</h1>
+<div class="container">
+  <h1>My Bookings</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>User</th>
-      <th>Car</th>
-      <th>Date</th>
-      <th>Actions</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @bookings.each do |booking| %>
+  <table class="table">
+    <thead>
       <tr>
-        <td><%= booking.id %></td>
-        <td><%= booking.user.first_name %></td>
-        <td><%= booking.date %></td>
-        <td>
-          <%= button_to "Delete", booking_path(booking), method: :delete %>
-        </td>
+        <th scope="col">Booking ID</th>
+        <th scope="col">User</th>
+        <th scope="col">Car brand</th>
+        <th scope="col">Date</th>
+        <th scope="col"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+
+    <tbody>
+      <% @bookings.each do |booking| %>
+        <tr>
+          <td scope="row"><%= booking.id %></td>
+          <td><%= booking.user.first_name %></td>
+          <td><%= booking.car.brand %></td>
+          <td><%= booking.date %></td>
+          <td>
+            <%= button_to "Delete", booking_path(booking), method: :delet, class:"btn btn-warning" %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
