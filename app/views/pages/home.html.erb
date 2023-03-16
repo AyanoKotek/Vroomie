@@ -7,12 +7,12 @@
 
 <div class="cars-container">
   <% @cars.each do |c| %>
-    <div class="card-product">
+    <div class="card-product" onclick="location.href='<%= car_path(c) %>'">
       <img src="<%= cl_image_path c.photos.first.key %>"/>
       <div class="card-product-infos">
         <h2><%= c.brand %></h2>
         <p>€<%= c.price %></p>
-        <%= link_to "Details", car_path(c), class: 'btn btn-primary' %>
+        <a href="<%= car_path(c) %>" class="btn btn-primary">Details</a>
       </div>
     </div>
   <% end %>
