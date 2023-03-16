@@ -14,7 +14,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.car = @car
     if @booking.save
-      redirect_to bookings_path, notice: "Booking done successfully."
+      redirect_to confirmation_booking_path(@booking)
     else
       render :new, status: :unprocessable_entity
     end
@@ -24,6 +24,10 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
     @booking.destroy
     redirect_to bookings_path, status: :see_other, notice: "Booking was successfully deleted."
+  end
+
+  def confirmation
+    @booking = Booking.find(params[:id])
   end
 
   private

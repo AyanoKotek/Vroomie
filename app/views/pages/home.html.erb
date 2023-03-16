@@ -8,12 +8,14 @@
 <div class="cars-container">
   <% @cars.each do |c| %>
     <div class="card-product">
-      <img src="<%= cl_image_path c.photos.first.key %>"/>
+      <img src="<%= cl_image_path c.photos.first.key %>">
       <div class="card-product-infos">
-        <h2><%= c.brand %></h2>
-        <p>€<%= c.price %></p>
-        <%= link_to "Details", car_path(c), class: 'btn btn-primary' %>
+      <h2><%= c.brand %></h2>
+      <p>€<%= c.price %></p>
+      <%= link_to "Details", car_path(c), class: 'btn btn-primary' %>
       </div>
-    </div>
+  </div>
   <% end %>
 </div>
+
+<%= link_to "Go see all the cars",cars_path %>

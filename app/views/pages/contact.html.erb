@@ -1,0 +1,9 @@
+<% members = ["abdullah", "ayano", "hakim", "françois"] %>
+<div class="container">
+  <ul>
+    <h2>Meet our team</h2>
+    <% members.each do |member| %>
+      <li class="d-inline p-2"><%= member.capitalize %></li>
+    <% end %>
+  </ul>
+</div>
