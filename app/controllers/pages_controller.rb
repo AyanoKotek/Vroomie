@@ -22,6 +22,6 @@ class PagesController < ApplicationController
   def dashboard
     @user = current_user
     @cars = Car.where(user: @user)
-
+    @bookings = Booking.where(user: @user)
   end
 end

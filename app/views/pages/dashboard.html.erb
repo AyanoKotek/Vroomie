@@ -1,14 +1,34 @@
-<h1><%= @user.first_name %>'s dashboard</h1>
-
 <div class="container">
-  <h3>Your cars on listing</h3>
-  <%= @cars.each do |car| %>
-    <div class="card-product">
-      <img src="<%= cl_image_path car.photos.first.key %>"/>
-      <div class="card-product-infos">
-        <h2><%= car.brand %></h2>
-        <p><%= car.description %></p>
-      </div>
+  <h1><%= @user.first_name %>'s dashboard</h1>
+
+  <div class="dashboard-container">
+    <div class="listing-card">
+      <h3>Your cars on listing</h3>
+      <% @cars.each do |car| %>
+        <div class="car-list">
+          <img src="<%= cl_image_path car.photos.first.key %>"/>
+          <div class="card-product-infos">
+            <h3><%= car.brand %></h3>
+            <p><%= car.description %></p>
+          </div>
+        </div>
+      <% end %>
     </div>
-  <% end %>
+
+     <div class="listing-card">
+      <h3>Your booking</h3>
+      <% if @bookings.empty? %>
+        <p>There is no booking currently. </p>
+      <% else %>
+        <% @bookings.each do |booking| %>
+          <div class="car-list">
+            <div class="card-product-infos">
+              <p>From: <%= booking.start_date %></p>
+              <p>To: <%= booking.end_date %></p>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
 </div>

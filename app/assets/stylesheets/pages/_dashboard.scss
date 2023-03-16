@@ -1,0 +1,82 @@
+body {
+  min-height:100vh;
+}
+h1 {
+  font-family: $lato-font;
+  color: #666;
+  font-weight: bold;
+}
+
+.dashboard-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+}
+.listing-card {
+  color: #555;
+  border: 1px solid #d3d2d2;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  height: 400px;
+  padding: 15px;
+}
+.car-list {
+  overflow: hidden;
+  background: white;
+  display: flex;
+  align-items: center;
+  margin: 10px;
+
+  img {
+    height: 100%;
+    width: 120px;
+    object-fit: cover;
+    padding: 10px;
+  }
+
+  h3 {
+    margin: 10px;
+    font-size: 20px;;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  }
+
+  card-product-infos {
+    padding: 16px;
+
+  }
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .listing-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .listing-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .listing-card {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .listing-card {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .listing-card {
+    grid-template-columns: 1fr 1fr;
+  }
+}
