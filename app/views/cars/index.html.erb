@@ -1,8 +1,8 @@
-
-<h1>Find cars in your area</h1>
-<div style="width: 500px; height: 500px;"
+<div class="text-center">
+  <h1>Find cars in your area</h1>
+</div>
+<div class ="map" style="width: 500px; height: 500px;"
   data-controller="map"
   data-map-markers-value="<%= @markers.to_json %>"
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
-
