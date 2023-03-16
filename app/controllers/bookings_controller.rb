@@ -2,7 +2,7 @@ class BookingsController < ApplicationController
   before_action :set_car, only: [:new, :create, :show]
 
   def index
-    @bookings = Booking.all
+    @bookings = Booking.where(user: current_user)
   end
 
   def new
@@ -37,6 +37,6 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit(:date)
+    params.require(:booking).permit(:start_date, :end_date)
   end
 end
