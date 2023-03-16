@@ -84,6 +84,11 @@
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 5px !important;
+    cursor: pointer;
+  }
+
+  .card-product {
+    flex-basis: 300px;
   }
 
   .card-product {
