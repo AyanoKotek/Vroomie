@@ -4,6 +4,21 @@ class CarsController < ApplicationController
     @car = Car.find(params[:id])
   end
 
+  def edit
+    @user = current_user
+    @car = Car.find(params[:id])
+  end
+
+  def update
+    @car = Car.find(params[:id])
+    if @car.update(car_params)
+      redirect_to @car
+      flash[:success] = "Car Updated!"
+    else
+      render action: :edit
+    end
+  end
+
   def new
     @car = Car.new
   end
