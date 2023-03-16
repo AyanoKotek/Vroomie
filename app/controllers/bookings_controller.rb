@@ -30,6 +30,21 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
   end
 
+  def edit
+    @user = current_user
+    @booking = Booking.find(params[:id])
+  end
+
+  def update
+    @booking = Booking.find(params[:id])
+    if @booking.update(booking_params)
+      redirect_to confirmation_booking_path(@booking)
+      flash[:success] = "booking Updated!"
+    else
+      render action: :edit
+    end
+  end
+
   private
 
   def set_car
