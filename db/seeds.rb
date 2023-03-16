@@ -20,31 +20,37 @@ francois = User.create!(first_name: "Francois", last_name: "Vallat", email: "fra
 abdullah = User.create!(first_name: "Abdullah", last_name: "Alameen", email: "abdullah@gmail.com", password: 123456)
 
 puts "Creating Car data..."
-file = URI.open("https://www.drivespark.com/images/2022-06/2022-bmw-x1-8.jpg")
-car1 = Car.new(brand: "bmw", description: "It's a nice car", price: 200, year: 2020)
-car1.photo.attach(io: file, filename: "bmw1.png", content_type: "image/png")
+car1 = Car.new(brand: "BMW", description: "It's fairly new. Spacious inside and all in all it's a nice car", price: 200, year: 2020, address: "Marylebone Rd, London NW1 5LR")
+car1.photos.attach(io: File.open('app/assets/images/cars.png'), filename: "cars.png", content_type: "image/png")
+car1.photos.attach(io: File.open('app/assets/images/download-car.png'), filename: "cars.png", content_type: "image/png")
+car1.photos.attach(io: File.open('app/assets/images/honda-car.png'), filename: "cars.png", content_type: "image/png")
 car1.user = ayano
 car1.save!
 
-car2 = Car.new(brand: "Mercedes", description: "Very beautiful car", price: 300, year: 2021)
+car2 = Car.new(brand: "Honda", description: "Very beautiful car", price: 300, year: 2021, address: "Moniuszki 26A, 78-550 Czaplinek")
+car2.photos.attach(io: File.open('app/assets/images/honda-car.png'), filename: "cars.png", content_type: "image/png")
+car2.photos.attach(io: File.open('app/assets/images/land-rover.png'), filename: "cars.png", content_type: "image/png")
+car2.photos.attach(io: File.open('app/assets/images/sedan-transparent.png'), filename: "cars.png", content_type: "image/png")
 car2.user = hakim
 car2.save!
 
-car2 = Car.new(brand: "Mercedes", description: "Very beautiful car", price: 300, year: 2021)
-car2.user = hakim
-car2.save!
+car3 = Car.new(brand: "Ferrari", description: "It's a super cool car. Nice powerful engine", price: 300, year: 3021, address: "1 Rue de la Légion d'Honneur, 75007 Paris")
+car3.photos.attach(io: File.open('app/assets/images/sedan-transparent.png'), filename: "sedan-transparent.png", content_type: "image/png")
+car3.photos.attach(io: File.open('app/assets/images/land-rover.png'), filename: "3ars.png", content_type: "image/png")
+car3.photos.attach(io: File.open('app/assets/images/sedan-transparent.png'), filename: "cars.png", content_type: "image/png")
+car3.user = hakim
+car3.save!
 
-puts "Creating Booking data..."
-date1 = Date.parse('3rd Feb 2023')
-booking1 = Booking.new(date: date1)
-booking1.user = francois
-booking1.car = car1
-booking1.save!
+# puts "Creating Booking data..."
+# date1 = Date.parse('3rd Feb 2023')
+# booking1 = Booking.new(date: date1)
+# booking1.user = francois
+# booking1.car = car1
+# booking1.save!
 
-date2 = Date.parse('31th March 2023')
-booking2 = Booking.new(date: date2)
-booking2.user = abdullah
-booking2.car = car2
-booking2.save!
-
+# date2 = Date.parse('31th March 2023')
+# booking2 = Booking.new(date: date2)
+# booking2.user = abdullah
+# booking2.car = car2
+# booking2.save!
 puts "Finished!"
