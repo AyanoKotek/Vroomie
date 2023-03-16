@@ -18,7 +18,8 @@
           <td scope="row"><%= booking.id %></td>
           <td><%= booking.user.first_name %></td>
           <td><%= booking.car.brand %></td>
-          <td><%= booking.date %></td>
+          <td><%= booking.start_date %></td>
+          <td><%= booking.end_date %></td>
           <td>
             <%= button_to "Delete", booking_path(booking), method: :delete, class:"btn btn-orange" %>
           </td>
