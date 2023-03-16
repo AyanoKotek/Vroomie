@@ -1,1 +1,14 @@
-<h1>Your dashboard</h1>
+<h1><%= @user.first_name %>'s dashboard</h1>
+
+<div class="container">
+  <h3>Your cars on listing</h3>
+  <%= @cars.each do |car| %>
+    <div class="card-product">
+      <img src="<%= cl_image_path car.photos.first.key %>"/>
+      <div class="card-product-infos">
+        <h2><%= car.brand %></h2>
+        <p><%= car.description %></p>
+      </div>
+    </div>
+  <% end %>
+</div>
