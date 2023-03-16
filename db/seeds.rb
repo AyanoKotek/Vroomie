@@ -20,7 +20,7 @@ francois = User.create!(first_name: "Francois", last_name: "Vallat", email: "fra
 abdullah = User.create!(first_name: "Abdullah", last_name: "Alameen", email: "abdullah@gmail.com", password: 123456)
 
 puts "Creating Car data..."
-car1 = Car.new(brand: "BMW", description: "It's fairly new. Spacious inside and all in all it's a nice car", price: 200, year: 2020, address: "Mrs Smith 71 Cherry Court SOUTHAMPTON SO53 5PD UK")
+car1 = Car.new(brand: "BMW", description: "It's fairly new. Spacious inside and all in all it's a nice car", price: 200, year: 2020, address: "Marylebone Rd, London NW1 5LR")
 car1.photos.attach(io: File.open('app/assets/images/cars.png'), filename: "cars.png", content_type: "image/png")
 car1.photos.attach(io: File.open('app/assets/images/download-car.png'), filename: "cars.png", content_type: "image/png")
 car1.photos.attach(io: File.open('app/assets/images/honda-car.png'), filename: "cars.png", content_type: "image/png")
