@@ -1,0 +1,7 @@
+<div class="container">
+  <h1><i class="fa-regular fa-circle-check"></i>Booking is successfully done.</h1>
+  <p>Your name : <%= @booking.user.first_name %> <%= @booking.user.last_name %></p>
+  <p>Date : <%= @booking.date.strftime("%b %d, %Y") %></p>
+  <p>Car Brand : <%= @booking.car.brand %></p>
+  <p>Car owner : <%= @booking.car.user.first_name %> <%= @booking.car.user.last_name %></p>
+</div>

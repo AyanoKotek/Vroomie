@@ -7,4 +7,13 @@ class PagesController < ApplicationController
   def show
     @car = Car.find(params[:id])
   end
+
+  def about
+  end
+
+  def contact
+  end
+
+  def dashboard
+  end
 end
