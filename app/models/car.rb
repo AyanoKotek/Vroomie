@@ -1,4 +1,6 @@
 class Car < ApplicationRecord
+  include PgSearch::Model
+  pg_search_scope :search_by_brand, against: :brand
   belongs_to :user
   has_many_attached :photos
   validates :photos, :length => { :minimum => 3, :maximum => 3,

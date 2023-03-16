@@ -53,5 +53,4 @@ car3.save!
 # booking2.user = abdullah
 # booking2.car = car2
 # booking2.save!
-
 puts "Finished!"
