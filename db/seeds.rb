@@ -41,6 +41,27 @@ car3.photos.attach(io: File.open('app/assets/images/sedan-transparent.png'), fil
 car3.user = hakim
 car3.save!
 
+car4 = Car.new(brand: "BMW", description: "It's fairly new. Spacious inside and all in all it's a nice car", price: 200, year: 2020, address:"35 Rue Jean Jaurès, 94350 Villiers-sur-Marne")
+car4.photos.attach(io: File.open('app/assets/images/cars.png'), filename: "cars.png", content_type: "image/png")
+car4.photos.attach(io: File.open('app/assets/images/download-car.png'), filename: "cars.png", content_type: "image/png")
+car4.photos.attach(io: File.open('app/assets/images/honda-car.png'), filename: "cars.png", content_type: "image/png")
+car4.user = ayano
+car4.save!
+
+car5 = Car.new(brand: "Honda", description: "Very beautiful car", price: 300, year: 2021, address: "12 Av. Ampère, 78180 Montigny-le-Bretonneux")
+car5.photos.attach(io: File.open('app/assets/images/honda-car.png'), filename: "cars.png", content_type: "image/png")
+car5.photos.attach(io: File.open('app/assets/images/land-rover.png'), filename: "cars.png", content_type: "image/png")
+car5.photos.attach(io: File.open('app/assets/images/sedan-transparent.png'), filename: "cars.png", content_type: "image/png")
+car5.user = hakim
+car5.save!
+
+car6 = Car.new(brand: "Ferrari", description: "It's a super cool car. Nice powerful engine", price: 300, year: 3021, address: "12 Av. du Château de la Malmaison, 92500 Rueil-Malmaison")
+car6.photos.attach(io: File.open('app/assets/images/sedan-transparent.png'), filename: "sedan-transparent.png", content_type: "image/png")
+car6.photos.attach(io: File.open('app/assets/images/land-rover.png'), filename: "3ars.png", content_type: "image/png")
+car6.photos.attach(io: File.open('app/assets/images/sedan-transparent.png'), filename: "cars.png", content_type: "image/png")
+car6.user = hakim
+car6.save!
+
 # puts "Creating Booking data..."
 # date1 = Date.parse('3rd Feb 2023')
 # booking1 = Booking.new(date: date1)
