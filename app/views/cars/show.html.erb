@@ -37,7 +37,7 @@
   </div>
 </div>
 <div class="col text-center">
-  <%= link_to "Make a booking", new_car_booking_path(@car), class: 'btn btn-gradient btn-lg' %>
-  <%= link_to "Edit this car", edit_car_path(@car), class: 'btn btn-orange btn-lg' %>
-  <%= link_to "Delete this car", car_path(@car), data: { turbo_method: :delete }, class: 'btn btn-red btn-lg' %>
+  <%= link_to "Make a booking", new_car_booking_path(@car), class: 'btn btn-gradient btn-lg btn-show' %>
+  <%= link_to "Edit this car", edit_car_path(@car), class: 'btn btn-orange btn-lg btn-show' %>
+  <%= link_to "Delete this car", car_path(@car), data: { turbo_method: :delete }, class: 'btn btn-red btn-lg btn-show' %>
 </div>
