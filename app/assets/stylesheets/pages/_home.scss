@@ -1,4 +1,5 @@
 * {box-sizing: border-box;}
+$red: #9f1e1e;
 
 /* Style the navbar */
 .topnav {
@@ -84,15 +85,16 @@
   .header {
     margin: 0;
     color: rgb(159, 30, 30);
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-    font-size: 40px;
+    // text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    font-size: 3rem;
     font-weight: bold;
+    font-family: $abril-font;
   }
 
   .search-form-control {
     position: relative;
     width: 50%;
-    padding-top: 10px;
+    // padding-top: 10px;
     margin: 0 auto;
   }
 
@@ -113,7 +115,7 @@
     border-color: white;
     padding-left: 40px;
     font-weight: bold;
-    padding-top: 10px;
+    // padding-top: 10px;
   }
 
   .search-form-control .form-control:focus {
@@ -194,4 +196,14 @@
     .topnav input[type=text] {
       border: 1px solid #ccc;
     }
+}
+//container under banner
+.top-container>h2{
+  font-family: $abril-font;
+  margin: 20px 0;
+}
+
+.h2-underline {
+  background-color: $red;
+  opacity: 0.8;
 }
