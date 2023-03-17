@@ -20,16 +20,15 @@
     </div>
   </form>
 
-  <div class="cars-container">
+<div class="spacing">
     <% @cars.each do |c| %>
-      <div class="card-product" onclick="location.href='<%= car_path(c) %>'">
-        <img src="<%= cl_image_path c.photos.first.key %>"/>
-        <div class="card-product-infos">
-          <h2><%= c.brand %></h2>
-          <p>€<%= c.price %></p>
-          <a href="<%= car_path(c) %>" class="btn btn-primary">Details</a>
+      <div class="wrapper">
+      <img class="banner-image" onclick="location.href='<%= car_path(c) %>'" src= "<%= cl_image_path c.photos.first.key%>">
+      <h2><%= c.brand %></h2>
+      <p>€<%= c.price %></p>
+      <div class="button-wrapper"> 
+        <%= link_to "details", car_path(c), class: "btn outline" %>
         </div>
     </div>
     <% end %>
   </div>
-</div>
