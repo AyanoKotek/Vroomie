@@ -1,9 +1,12 @@
-<% members = ["abdullah", "ayano", "hakim", "françois"] %>
-<div class="container">
-  <ul>
-    <h2>Meet our team</h2>
-    <% members.each do |member| %>
-      <li class="d-inline p-2"><%= member.capitalize %></li>
-    <% end %>
-  </ul>
+
+<h2>Meet our team:</h2>
+<div class="container text-center" id="face">
+  <%= image_tag ("Ayano.jpeg"), class: "faces about"%>
+  <%= image_tag ("Francois.jpeg"), class: "faces about"%>
+  <%= image_tag ("Hakim.jpeg"), class: "faces about"%>
+  <%= image_tag ("Abdulla.jpeg"), class: "faces about"%>
+</div>
+
+<div class="text-center">
+  <p>Ayano Francois Hakim Abdulla</p>
 </div>
