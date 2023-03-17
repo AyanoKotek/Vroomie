@@ -83,16 +83,18 @@
 }
 
 /* Optional: Add a sticky footer */
-html {
-  height: 100%;
-}
+// html {
+//   height: 100%;
+// }
 
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-}
+// body {
+//   display: flex;
+//   flex-direction: column;
+//   min-height: 100%;
+// }
 
 .content-wrapper {
-  flex: 1;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
 }
