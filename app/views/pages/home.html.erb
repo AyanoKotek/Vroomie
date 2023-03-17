@@ -5,15 +5,19 @@
 <div class="banner" style="background-image:url(https://static.vecteezy.com/ti/gratis-vektor/p3/15393176-uppkopplad-bil-hyra-manniskor-anvander-sig-av-mobil-ansokan-for-bestallning-taxi-cab-eller-bil-delning-kvinna-nara-smartphone-skarm-med-rutt-och-plats-mark-pa-en-stad-karta-vector.jpg);">
 </div>
 
-<div class="cars-container">
-  <% @cars.each do |c| %>
-    <div class="card-product" onclick="location.href='<%= car_path(c) %>'">
-      <img src="<%= cl_image_path c.photos.first.key %>"/>
-      <div class="card-product-infos">
-        <h2><%= c.brand %></h2>
-        <p>€<%= c.price %></p>
-        <a href="<%= car_path(c) %>" class="btn btn-primary">Details</a>
+
+
+<div class="spacing">
+    <% @cars.each do |c| %>
+      <div class="wrapper">
+      <img class="banner-image" onclick="location.href='<%= car_path(c) %>'" src= "<%= cl_image_path c.photos.first.key%>">
+      <h2><%= c.brand %></h2>
+      <p>€<%= c.price %></p>
+      <div class="button-wrapper"> 
+        <%= link_to "details", car_path(c), class: "btn outline" %>
       </div>
-  </div>
+   </div>
   <% end %>
 </div>
+
+
