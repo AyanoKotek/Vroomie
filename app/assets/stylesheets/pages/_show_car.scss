@@ -51,7 +51,7 @@ p {
   transform: scale(1.125);
   color: rgba(58, 84, 105, 0.9);
   border-color: rgba(61, 110, 156, 0.9);
-  transition: all .3s ease;  
+  transition: all .3s ease;
 }
 
 .spacing {
@@ -95,4 +95,9 @@ p {
   .spacing {
     grid-template-columns: 1fr 1fr 1fr;
   }
+}
+
+.btn-show{
+  margin-left: 15px;
+  margin-bottom: 25px;
 }
