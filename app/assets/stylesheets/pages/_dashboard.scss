@@ -1,7 +1,7 @@
 body {
   min-height:100vh;
 }
-h1 {
+.dashboard-wrapper > h1,h2,h3,p {
   font-family: $lato-font;
   color: #666;
   font-weight: bold;

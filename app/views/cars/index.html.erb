@@ -1,8 +1,29 @@
-<div class="text-center">
-  <h1>Find cars in your area</h1>
-</div>
-<div class ="map" style="width: 500px; height: 500px;"
-  data-controller="map"
-  data-map-markers-value="<%= @markers.to_json %>"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+<div class="container">
+  <div class="row">
+
+    <div class="col-8 col-sm-12">
+      <% @cars.each do |c| %>
+          <div class="card-trip" onclick="location.href='<%= car_path(c) %>'">
+            <img src="<%= cl_image_path c.photos.first.key %>"/>
+            <div class="card-trip-infos">
+              <h2><%= c.brand %></h2>
+              <p>€<%= c.price %></p>
+            </div>
+            <h2 class="card-trip-pricing">€<%= c.price %></h2>
+          </div>
+      <% end %>
+    </div>
+
+    <div class="col-4 col-sm-12">
+      <div class="text-center">
+        <h1>Find cars in your area</h1>
+      </div>
+      <div class ="map" style="width: 500px; height: 500px;"
+        data-controller="map"
+        data-map-markers-value="<%= @markers.to_json %>"
+        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+    </div>
+
+  </div>
 </div>
