@@ -1,2 +1,40 @@
-<h1>About us</h1>
-<p>We offer an easy and quick way to rent a car. Explore the world's largest car sharing marketplace!</p>
+<div class="container heading">
+  <h1>About us:</h1>
+</div>
+
+<div class="container">
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"><h3>What is Vroomie?</h3></button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false"><h3>Our mission!</h3></button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false"><h3>Who are we?</h3></button>
+  </li>
+   <li class="nav-item" role="presentation">
+    <button class="nav-link" id="vacancies-tab" data-bs-toggle="tab" data-bs-target="#vacancies-tab-pane" type="button" role="tab" aria-controls="vacancies-tab-pane" aria-selected="false"><h3>Vacancies</h3></button>
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+  <h4><strong>Vroomie</strong> is a one-stop-shop for all your driving rental needs, we offer the oppertunity fo you to rent a car and rent out your car. We have specialist staff on hand to make thorough checks of all cars passed through our system! With over a decade of work we have become the <strong>Number 1</strong> international rental company for luxury cars.</h4><div><h4>In the last 10 years we have had well over <strong>1,000,000</strong> cars listed onto our website, we are proud to have had 0 issues with any if these cars! Unbeliveble right?</h4></div></div>
+  <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+  <h4><strong>Our mission</strong> is to takeover the rental industry, we want a monopoly of all car rental services globally. Having already aquired over <strong>300</strong> rental company we continue to digest the industry as a whole! In another 10 years we see our selves being the only rental company gloablly all cars will go through us...</h4><div><h4><strong>Phase 2:</strong> Next we will begin car ownership, all cars will be designed, manafactured and rented by us. Car ownership will no longer exist as we will have a patent over all car design. An exciting future!</h4></div></div>
+  <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0"><h4>Forbes magazine named us entrepreneurs of our generation. In a quote they stated "These four individuals have changed the face of car rental world!" We are proud to have formed our group through the our early boocamp days at Le Wagon, we created this project intially as a test, before gaining <strong>billions</strong> in investment.</h4><div><p>Disclosure: We currently own Forbes magazine.</p></div></div>
+   <div class="tab-pane fade" id="vacancies-tab-pane" role="tabpanel" aria-labelledby="vacancies-tab" tabindex="0"><h4>Currently there are: 0 Vacancies please check again next month..</h4></div>
+</div>
+</div>
+
+<div class="container" id="face">
+  <%= image_tag ("Ayano.jpeg"), class: "faces"%>
+  <%= image_tag ("Francois.jpeg"), class: "faces"%>
+  <%= image_tag ("Hakim.jpeg"), class: "faces"%>
+  <%= image_tag ("Abdulla.jpeg"), class: "faces"%>
+</div>
+<%# <div class="container">
+  <div class="headline">
+    <p>We offer an easy and quick way to rent a car. Explore the world's largest car sharing marketplace!</p>
+  </div>
+</div> %>
