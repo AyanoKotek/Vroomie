@@ -20,43 +20,43 @@ francois = User.create!(first_name: "Francois", last_name: "Vallat", email: "fra
 abdullah = User.create!(first_name: "Abdullah", last_name: "Alameen", email: "abdullah@gmail.com", password: 123456)
 
 puts "Creating Car data..."
-car1 = Car.new(brand: "BMW", description: "It's fairly new. Spacious inside and all in all it's a nice car", price: 200, year: 2020, address:"80 Bd Jean Jaurès, 92110 Clichy")
-car1.photos.attach(io: File.open('app/assets/images/cars.png'), filename: "cars.png", content_type: "image/png")
+car1 = Car.new(brand: "FORD", description: "It's fairly new. Spacious inside and all in all it's a nice car", price: 400, year: 2020, address:"80 Bd Jean Jaurès, 92110 Clichy")
+car1.photos.attach(io: File.open('app/assets/images/Classic-Car-Hire.png'), filename: "cars.png", content_type: "image/png")
 car1.photos.attach(io: File.open('app/assets/images/download-car.png'), filename: "cars.png", content_type: "image/png")
 car1.photos.attach(io: File.open('app/assets/images/honda-car.png'), filename: "cars.png", content_type: "image/png")
 car1.user = ayano
 car1.save!
 
-car2 = Car.new(brand: "Honda", description: "Very beautiful car", price: 300, year: 2021, address: "Rte de la Pyramide, 75012 Paris")
-car2.photos.attach(io: File.open('app/assets/images/honda-car.png'), filename: "cars.png", content_type: "image/png")
+car2 = Car.new(brand: "range rover", description: "Very beautiful car", price: 300, year: 2021, address: "Rte de la Pyramide, 75012 Paris")
+car2.photos.attach(io: File.open('app/assets/images/range-rover.png'), filename: "cars.png", content_type: "image/png")
 car2.photos.attach(io: File.open('app/assets/images/land-rover.png'), filename: "cars.png", content_type: "image/png")
 car2.photos.attach(io: File.open('app/assets/images/sedan-transparent.png'), filename: "cars.png", content_type: "image/png")
 car2.user = hakim
 car2.save!
 
-car3 = Car.new(brand: "Ferrari", description: "It's a super cool car. Nice powerful engine", price: 300, year: 3021, address: "1 Rue de la Légion d'Honneur, 75007 Paris")
-car3.photos.attach(io: File.open('app/assets/images/sedan-transparent.png'), filename: "sedan-transparent.png", content_type: "image/png")
+car3 = Car.new(brand: "Classic 1967", description: "It's a super cool car. Nice powerful engine", price: 200, year: 3021, address: "1 Rue de la Légion d'Honneur, 75007 Paris")
+car3.photos.attach(io: File.open('app/assets/images/Classic-Old-Car.png'), filename: "sedan-transparent.png", content_type: "image/png")
 car3.photos.attach(io: File.open('app/assets/images/land-rover.png'), filename: "3ars.png", content_type: "image/png")
 car3.photos.attach(io: File.open('app/assets/images/sedan-transparent.png'), filename: "cars.png", content_type: "image/png")
 car3.user = hakim
 car3.save!
 
-car4 = Car.new(brand: "BMW", description: "It's fairly new. Spacious inside and all in all it's a nice car", price: 200, year: 2020, address:"35 Rue Jean Jaurès, 94350 Villiers-sur-Marne")
-car4.photos.attach(io: File.open('app/assets/images/cars.png'), filename: "cars.png", content_type: "image/png")
+car4 = Car.new(brand: "JAGUAR", description: "It's fairly new. Spacious inside and all in all it's a nice car", price: 700, year: 2020, address:"35 Rue Jean Jaurès, 94350 Villiers-sur-Marne")
+car4.photos.attach(io: File.open('app/assets/images/jaguar.png'), filename: "cars.png", content_type: "image/png")
 car4.photos.attach(io: File.open('app/assets/images/download-car.png'), filename: "cars.png", content_type: "image/png")
 car4.photos.attach(io: File.open('app/assets/images/honda-car.png'), filename: "cars.png", content_type: "image/png")
 car4.user = ayano
 car4.save!
 
-car5 = Car.new(brand: "Honda", description: "Very beautiful car", price: 300, year: 2021, address: "12 Av. Ampère, 78180 Montigny-le-Bretonneux")
-car5.photos.attach(io: File.open('app/assets/images/honda-car.png'), filename: "cars.png", content_type: "image/png")
+car5 = Car.new(brand: "nissan Z", description: "Very beautiful car", price: 300, year: 2021, address: "12 Av. Ampère, 78180 Montigny-le-Bretonneux")
+car5.photos.attach(io: File.open('app/assets/images/nissan-z.png'), filename: "cars.png", content_type: "image/png")
 car5.photos.attach(io: File.open('app/assets/images/land-rover.png'), filename: "cars.png", content_type: "image/png")
 car5.photos.attach(io: File.open('app/assets/images/sedan-transparent.png'), filename: "cars.png", content_type: "image/png")
 car5.user = hakim
 car5.save!
 
-car6 = Car.new(brand: "Ferrari", description: "It's a super cool car. Nice powerful engine", price: 300, year: 3021, address: "12 Av. du Château de la Malmaison, 92500 Rueil-Malmaison")
-car6.photos.attach(io: File.open('app/assets/images/sedan-transparent.png'), filename: "sedan-transparent.png", content_type: "image/png")
+car6 = Car.new(brand: "lotus", description: "It's a super cool car. Nice powerful engine", price: 800, year: 3021, address: "12 Av. du Château de la Malmaison, 92500 Rueil-Malmaison")
+car6.photos.attach(io: File.open('app/assets/images/lotus-evora.png'), filename: "sedan-transparent.png", content_type: "image/png")
 car6.photos.attach(io: File.open('app/assets/images/land-rover.png'), filename: "3ars.png", content_type: "image/png")
 car6.photos.attach(io: File.open('app/assets/images/sedan-transparent.png'), filename: "cars.png", content_type: "image/png")
 car6.user = hakim
