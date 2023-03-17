@@ -1,8 +1,25 @@
-<div class="footer">
+<%# <div class="footer">
   <div class="footer-links">
     <a href="https://github.com/AyanoKotek/Vroomie"><i class="fab fa-github"></i></a>
   </div>
   <div class="footer-copyright">
     Vroomie is made with <i class="fas fa-heart"></i> Pokelearn Team
   </div>
-</div>
+</div> %>
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-section links">
+      <ul>
+        <li><%= link_to 'Home', root_path %></li>
+        <li><%= link_to 'About Us', about_path %></li>
+        <li><%= link_to 'Contact', contact_path %></li>
+      </ul>
+    </div>
+
+    <div class="footer-section social">
+      <span>Follow us:</span>
+      <a href="https://github.com/AyanoKotek/Vroomie" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+  </div>
+</footer>
