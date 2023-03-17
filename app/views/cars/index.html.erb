@@ -1,20 +1,26 @@
 <div class="container">
   <div class="row">
 
-    <div class="col-8 col-sm-12">
-      <% @cars.each do |c| %>
-          <div class="card-trip" onclick="location.href='<%= car_path(c) %>'">
-            <img src="<%= cl_image_path c.photos.first.key %>"/>
-            <div class="card-trip-infos">
-              <h2><%= c.brand %></h2>
-              <p>€<%= c.price %></p>
+    <div class="col-12 col-md-8">
+      <div class="text-center">
+        <h1>Our listing of the cars</h1>
+      </div>
+      <div class="cars-cards-container">
+        <% @cars.each do |c| %>
+          <a href="<%= car_path(c) %>" style="text-decoration: none">
+            <div class="card-trip" style="width:100%; text-align:center" onclick="location.href='<%= car_path(c) %>'">
+                <img src="<%= cl_image_path c.photos.first.key %>"/>
+              <div class="card-trip-infos">
+                <h2><%= c.brand %></h2>
+                <p>€<%= c.price %></p>
+              </div>
             </div>
-            <h2 class="card-trip-pricing">€<%= c.price %></h2>
-          </div>
-      <% end %>
+          </a>
+        <% end %>
+      </div>
     </div>
 
-    <div class="col-4 col-sm-12">
+    <div class="col-12 col-md-4">
       <div class="text-center">
         <h1>Find cars in your area</h1>
       </div>
