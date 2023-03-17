@@ -7,7 +7,7 @@
 </div>
 
 <div class="container top-container text-center">
-  <h2>Explore the world's largest car sharing marketplace</h2>
+  <h2 id="phrase">Explore the world's largest car sharing marketplace</h2>
   <div width="750px" class="h2-underline">
   </div>
 
@@ -29,11 +29,10 @@
           <p>€<%= c.price %></p>
         </div>
       <% end %>
-        <div class="button-wrapper"> 
+        <div class="button-wrapper">
         <%= link_to "details", car_path(c), class: "btn outline" %>
     </div>
    </div>
   <% end %>
  </div>
 </div>
-
