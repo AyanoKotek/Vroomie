@@ -1,29 +1,37 @@
 <div class="container">
   <h1>My Bookings</h1>
 
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">Booking ID</th>
-        <th scope="col">User</th>
-        <th scope="col">Car brand</th>
-        <th scope="col">Date</th>
-        <th scope="col"></th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @bookings.each do |booking| %>
+  <% if @bookings.any? %>
+    <table class="table">
+      <thead>
         <tr>
-          <td scope="row"><%= booking.id %></td>
-          <td><%= booking.user.first_name %></td>
-          <td><%= booking.car.brand %></td>
-          <td><%= booking.date %></td>
-          <td>
-            <%= button_to "Delete", booking_path(booking), method: :delete, class:"btn btn-warning" %>
-          </td>
+          <th scope="col">Booking ID</th>
+          <th scope="col">User</th>
+          <th scope="col">Car brand</th>
+          <th scope="col">Start Date</th>
+          <th scope="col">End Date</th>
+          <th scope="col"></th>
         </tr>
-      <% end %>
-    </tbody>
-  </table>
+      </thead>
+
+      <tbody>
+        <% @bookings.each do |booking| %>
+          <tr>
+            <td scope="row"><%= booking.id %></td>
+            <td><%= booking.user.first_name %></td>
+            <td><%= booking.car.brand %></td>
+            <td><%= booking.start_date %></td>
+            <td><%= booking.end_date %></td>
+            <td>
+              <%= button_to "Delete", booking_path(booking), method: :delete, class:"btn btn-red" %>
+              <%= link_to "Edit", edit_booking_path(booking), class: 'btn btn-orange' %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  <% else %>
+    <p>You don't have any bookings. Please make a booking.</p>
+    <%= link_to "Click here to see all cars available", cars_path, class: 'btn btn-primary' %>
+  <% end %>
 </div>

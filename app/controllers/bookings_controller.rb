@@ -2,7 +2,7 @@ class BookingsController < ApplicationController
   before_action :set_car, only: [:new, :create, :show]
 
   def index
-    @bookings = Booking.all
+    @bookings = Booking.where(user: current_user)
   end
 
   def new
@@ -30,6 +30,21 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
   end
 
+  def edit
+    @user = current_user
+    @booking = Booking.find(params[:id])
+  end
+
+  def update
+    @booking = Booking.find(params[:id])
+    if @booking.update(booking_params)
+      redirect_to confirmation_booking_path(@booking)
+      flash[:success] = "booking Updated!"
+    else
+      render action: :edit
+    end
+  end
+
   private
 
   def set_car
@@ -37,6 +52,6 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit(:date)
+    params.require(:booking).permit(:start_date, :end_date)
   end
 end

@@ -1,0 +1,47 @@
+.btn-gradient {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: linear-gradient(#2216fb, #5c99e3);
+  transition: background 0.3s ease;
+  border: 1px solid #0F60C4;
+  font-family: $lato-font;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(#147EFF, #0F67DA);
+  color: white;
+}
+
+.btn-orange {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: linear-gradient(#db4505, #f19354);
+  transition: background 0.3s ease;
+  border: 1px solid #db4f05;
+  font-family: $lato-font;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(#147EFF, #0F67DA);
+  color: white;
+}
+
+.btn-red {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: linear-gradient(#db0505, #cf4452);
+  transition: background 0.3s ease;
+  border: 1px solid #d20303;
+  font-family: $lato-font;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(#147EFF, #0F67DA);
+  color: white;
+}
