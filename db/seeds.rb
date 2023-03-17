@@ -48,19 +48,19 @@ car4.photos.attach(io: File.open('app/assets/images/honda-car.png'), filename: "
 car4.user = ayano
 car4.save!
 
-car5 = Car.new(brand: "nissan Z", description: "Very beautiful car", price: 300, year: 2021, address: "12 Av. Ampère, 78180 Montigny-le-Bretonneux")
-car5.photos.attach(io: File.open('app/assets/images/nissan-z.png'), filename: "cars.png", content_type: "image/png")
-car5.photos.attach(io: File.open('app/assets/images/land-rover.png'), filename: "cars.png", content_type: "image/png")
-car5.photos.attach(io: File.open('app/assets/images/sedan-transparent.png'), filename: "cars.png", content_type: "image/png")
-car5.user = hakim
-car5.save!
+# car5 = Car.new(brand: "nissan Z", description: "Very beautiful car", price: 300, year: 2021, address: "12 Av. Ampère, 78180 Montigny-le-Bretonneux")
+# car5.photos.attach(io: File.open('app/assets/images/nissan-z.png'), filename: "cars.png", content_type: "image/png")
+# car5.photos.attach(io: File.open('app/assets/images/land-rover.png'), filename: "cars.png", content_type: "image/png")
+# car5.photos.attach(io: File.open('app/assets/images/sedan-transparent.png'), filename: "cars.png", content_type: "image/png")
+# car5.user = hakim
+# car5.save!
 
-car6 = Car.new(brand: "lotus", description: "It's a super cool car. Nice powerful engine", price: 800, year: 3021, address: "12 Av. du Château de la Malmaison, 92500 Rueil-Malmaison")
-car6.photos.attach(io: File.open('app/assets/images/lotus-evora.png'), filename: "sedan-transparent.png", content_type: "image/png")
-car6.photos.attach(io: File.open('app/assets/images/land-rover.png'), filename: "3ars.png", content_type: "image/png")
-car6.photos.attach(io: File.open('app/assets/images/sedan-transparent.png'), filename: "cars.png", content_type: "image/png")
-car6.user = hakim
-car6.save!
+# car6 = Car.new(brand: "lotus", description: "It's a super cool car. Nice powerful engine", price: 800, year: 3021, address: "12 Av. du Château de la Malmaison, 92500 Rueil-Malmaison")
+# car6.photos.attach(io: File.open('app/assets/images/lotus-evora.png'), filename: "sedan-transparent.png", content_type: "image/png")
+# car6.photos.attach(io: File.open('app/assets/images/land-rover.png'), filename: "3ars.png", content_type: "image/png")
+# car6.photos.attach(io: File.open('app/assets/images/sedan-transparent.png'), filename: "cars.png", content_type: "image/png")
+# car6.user = hakim
+# car6.save!
 
 # puts "Creating Booking data..."
 # date1 = Date.parse('3rd Feb 2023')
