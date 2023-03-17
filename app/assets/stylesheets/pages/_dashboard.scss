@@ -1,8 +1,13 @@
 body {
   min-height:100vh;
 }
-.dashboard-wrapper > h1,h2,h3,p {
-  font-family: $lato-font;
+
+.listing-card p {
+  text-align: start;
+}
+
+.dashboard-wrapper > h1,h2 {
+  font-family: $abril-font;
   color: #666;
   font-weight: bold;
 }

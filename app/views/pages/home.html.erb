@@ -7,7 +7,7 @@
 </div>
 
 <div class="container top-container text-center">
-  <h2>Explore the world's largest car sharing marketplace</h2>
+  <h2 id="phrase">Explore the world's largest car sharing marketplace</h2>
   <div width="750px" class="h2-underline">
   </div>
 
@@ -25,15 +25,14 @@
      <div class="wrapper">
       <%= link_to car_path(c) do %>
         <div class="banner-image" style=" background-image: url('<%= cl_image_path c.photos.first.key%>'); ">
-          <h3><%= c.brand %></h3>
-          <p>€<%= c.price %></p>
+          <h2><%= c.brand %></h2>
         </div>
+          <h3 class="price">€<%= c.price %></h3>
       <% end %>
-        <div class="button-wrapper"> 
-        <%= link_to "details", car_path(c), class: "btn outline" %>
+        <div class="button-wrapper">
+        <%= link_to "Details", car_path(c), class: "btn outline" %>
     </div>
    </div>
   <% end %>
  </div>
 </div>
-

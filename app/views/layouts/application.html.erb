@@ -4,6 +4,7 @@
     <title>Vroomie</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5/4Vi1pAA4l7gD/+60jCx9l7g/I6d7C6txDl6OeI" crossorigin="anonymous">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -14,16 +15,14 @@
   </head>
 
   <body>
-
+  <div class="content-wrapper">
     <%= render "shared/navbar" %>
-
-
+    <main id="main-content">
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-
-    <%= yield %>
-
+      <%= yield %>
+    </main>
     <%= render "shared/footer" %>
-
+    </div>
   </body>
 </html>
