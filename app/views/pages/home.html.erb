@@ -26,11 +26,11 @@
       <%= link_to car_path(c) do %>
         <div class="banner-image" style=" background-image: url('<%= cl_image_path c.photos.first.key%>'); ">
           <h2><%= c.brand %></h2>
-          <p>€<%= c.price %></p>
         </div>
+          <h3 class="price">€<%= c.price %></h3>
       <% end %>
         <div class="button-wrapper">
-        <%= link_to "details", car_path(c), class: "btn outline" %>
+        <%= link_to "Details", car_path(c), class: "btn outline" %>
     </div>
    </div>
   <% end %>
